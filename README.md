@@ -47,13 +47,17 @@ The production bundle is written to `dist/`.
 
 ## GitHub Pages
 
-This project sets `base: "./"` in `vite.config.ts` and uses `HashRouter`, so it works when hosted from a sub-path without extra server rewrites.
+This project sets `base: "./"` in `vite.config.ts` and uses `HashRouter`, so it works from a **project** Pages URL (under `/<repo>/`) without extra server rewrites.
 
-1. Push this repository to GitHub.
-2. Enable **Pages** → **Build and deployment** → **GitHub Actions** (or deploy the `dist/` folder from `npm run build` as a static artifact).
-3. Ensure the published site points at `index.html` from `dist/`.
+### One-time setup on GitHub
 
-Because routing is hash-based, URLs look like `https://<user>.github.io/<repo>/#/executive`.
+1. Push the repo (including `.github/workflows/deploy-pages.yml`).
+2. Open the repo on GitHub → **Settings** → **Pages**.
+3. Under **Build and deployment** → **Source**, choose **GitHub Actions** (not “Deploy from a branch” unless you prefer that flow).
+4. Push to **`main`** (or run the workflow manually: **Actions** → **Deploy GitHub Pages** → **Run workflow**). The Action builds with `npm run build` and publishes `dist/`.
+5. When the workflow finishes, **Pages** shows your site URL (often within a minute). Example: `https://<user>.github.io/<repo>/#/executive`.
+
+If the workflow fails, open **Actions** → the failed run → read the job log (common fixes: ensure the default branch is `main`, or edit the workflow `branches` list to match yours).
 
 ## Demo mode vs live data
 

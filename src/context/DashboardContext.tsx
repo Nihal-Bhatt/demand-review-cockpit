@@ -16,7 +16,6 @@ import type {
   DatasetKey,
   DemandExceptionRow,
   DemandOutlookRow,
-  IssueRow,
   NormalizedDatasets,
 } from "../types/domain";
 import type { DatasetMappings, MappingDict, UploadPayload, UploadRecord } from "../types/mapping";

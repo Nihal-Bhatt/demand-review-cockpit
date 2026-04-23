@@ -28,6 +28,9 @@ jobs:
           node-version: "20"
 
       - name: Install and build
+        env:
+          # Must match repo name in Pages URL: github.io/<owner>/<repo>/
+          VITE_BASE_URL: /${{ github.event.repository.name }}/
         run: |
           npm install
           npm run build

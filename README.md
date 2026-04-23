@@ -47,7 +47,7 @@ The production bundle is written to `dist/`.
 
 ## GitHub Pages
 
-This project sets `base: "./"` in `vite.config.ts` and uses `HashRouter`, so it works from a **project** Pages URL (under `/<repo>/`) without extra server rewrites.
+This project uses `HashRouter` and sets **`VITE_BASE_URL`** in the GitHub Actions build to `/<repository-name>/` so asset paths match your **project** Pages URL. That avoids a blank page when the URL has no trailing slash (a common issue with a relative `./` base).
 
 ### One-time setup on GitHub
 

@@ -1,0 +1,8 @@
+{
+  "appTitle": "Demand Review",
+  "appSubtitle": "Monthly S&OP demand cockpit",
+  "valueAxis": "Value ($)",
+  "volumeAxis": "Volume (units)",
+  "handoffTitle": "Demand handoff to Supply Review",
+  "emptyState": "Upload Excel mappings in Data Admin or enable Demo mode to populate views."
+}

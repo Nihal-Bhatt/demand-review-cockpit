@@ -1,0 +1,28 @@
+{
+  "capacity": {
+    "overUtilization": 1.0,
+    "tightUtilization": 0.9,
+    "underUtilization": 0.8
+  },
+  "forecast": {
+    "fcaPoor": 0.85,
+    "biasMaterial": 0.08,
+    "volatilityHigh": 0.35,
+    "momMovementHigh": 0.12
+  },
+  "demand": {
+    "varianceMaterialVsBudget": 0.05,
+    "varianceMaterialVsPrior": 0.04
+  },
+  "exceptions": {
+    "weights": {
+      "impact": 0.55,
+      "confidence": 0.2,
+      "severity": 0.25
+    }
+  },
+  "npd": {
+    "ratioWatch": 0.12,
+    "daysNearLaunch": 90
+  }
+}
